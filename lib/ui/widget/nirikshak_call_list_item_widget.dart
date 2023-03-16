@@ -110,11 +110,12 @@ class NirikshakCallListItemWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 5,
+        vertical: 2,
       ),
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         color: call.response?.status.getStatusTextColor(),
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(4),
       ),
       child: Text(
         call.response?.statusCodeMessage ?? 'N/A',

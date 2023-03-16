@@ -10,7 +10,11 @@ export '../utils/nirikshak_strings.dart';
 
 class NirikshakCore {
   final Brightness brightness;
-  NirikshakCore({required this.brightness});
+  final Color? colorSchemeSeed;
+  NirikshakCore({
+    required this.brightness,
+    this.colorSchemeSeed,
+  });
 
   final List<NirikshakHttpCall> httpCalls = <NirikshakHttpCall>[];
 

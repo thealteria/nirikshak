@@ -15,6 +15,7 @@ class NirikshakStatsScreen extends StatelessWidget {
       data: ThemeData(
         useMaterial3: true,
         brightness: nirikshakCore.brightness,
+        colorSchemeSeed: nirikshakCore.colorSchemeSeed,
       ),
       child: Scaffold(
         appBar: AppBar(

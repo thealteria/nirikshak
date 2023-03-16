@@ -22,8 +22,12 @@ class Nirikshak {
 
   factory Nirikshak({
     Brightness brightness = Brightness.light,
+    Color? colorSchemeSeed,
   }) {
-    final nirikshakCore = NirikshakCore(brightness: brightness);
+    final nirikshakCore = NirikshakCore(
+      brightness: brightness,
+      colorSchemeSeed: colorSchemeSeed,
+    );
     return Nirikshak._(brightness, nirikshakCore);
   }
 

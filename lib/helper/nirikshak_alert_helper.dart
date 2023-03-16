@@ -13,6 +13,7 @@ class NirikshakAlertHelper {
     Function? firstButtonAction,
     Function? secondButtonAction,
     Brightness? brightness,
+    Color? colorSchemeSeed,
   }) {
     List<Widget> actions = [];
     actions.add(
@@ -41,10 +42,12 @@ class NirikshakAlertHelper {
     }
     showDialog(
       context: context,
-      builder: (BuildContext buildContext) {
+      builder: (_) {
         return Theme(
           data: ThemeData(
+            useMaterial3: true,
             brightness: brightness ?? Brightness.light,
+            colorSchemeSeed: colorSchemeSeed,
           ),
           child: AlertDialog(
             title: Text(title),

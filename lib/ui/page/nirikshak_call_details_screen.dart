@@ -35,6 +35,7 @@ class _NirikshakCallDetailsScreenState
       data: ThemeData(
         useMaterial3: true,
         brightness: widget.core.brightness,
+        colorSchemeSeed: widget.core.colorSchemeSeed,
       ),
       child: call.id != -1 ? _buildMainWidget() : _buildErrorWidget(),
     );

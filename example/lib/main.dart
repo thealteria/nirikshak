@@ -12,19 +12,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const Brightness brightness = Brightness.dark;
+    const Color colorSchemeSeed = Colors.blue;
+
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        brightness: Brightness.dark,
+        brightness: brightness,
+        colorSchemeSeed: colorSchemeSeed,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const HomePage(
+        brightness: brightness,
+        colorSchemeSeed: colorSchemeSeed,
+      ),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final Brightness brightness;
+  final Color colorSchemeSeed;
+
+  const HomePage({
+    super.key,
+    required this.brightness,
+    required this.colorSchemeSeed,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -38,7 +52,10 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    _nirikshak = Nirikshak(brightness: Brightness.dark);
+    _nirikshak = Nirikshak(
+      brightness: widget.brightness,
+      colorSchemeSeed: widget.colorSchemeSeed,
+    );
     _dio = Dio(BaseOptions(followRedirects: false))
       ..interceptors.add(_nirikshak.getDioInterceptor());
   }

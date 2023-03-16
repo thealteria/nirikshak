@@ -44,6 +44,7 @@ class _NirikshakCallsListScreenState extends State<NirikshakCallsListScreen> {
       data: ThemeData(
         useMaterial3: true,
         brightness: widget._nirikshakCore.brightness,
+        colorSchemeSeed: widget._nirikshakCore.colorSchemeSeed,
       ),
       child: Scaffold(
         appBar: AppBar(
@@ -168,6 +169,7 @@ class _NirikshakCallsListScreenState extends State<NirikshakCallsListScreen> {
       NirikshakStrings.deleteCalls,
       NirikshakStrings.deleteCallsQues,
       brightness: widget._nirikshakCore.brightness,
+      colorSchemeSeed: widget._nirikshakCore.colorSchemeSeed,
       firstButtonTitle: NirikshakStrings.no,
       firstButtonAction: () => {},
       secondButtonTitle: NirikshakStrings.yes,

@@ -31,14 +31,7 @@ class _NirikshakCallDetailsScreenState
         (snapshotCall) => snapshotCall.id == widget.call.id,
         orElse: () => NirikshakHttpCall(-1));
 
-    return Theme(
-      data: ThemeData(
-        useMaterial3: true,
-        brightness: widget.core.brightness,
-        colorSchemeSeed: widget.core.colorSchemeSeed,
-      ),
-      child: call.id != -1 ? _buildMainWidget() : _buildErrorWidget(),
-    );
+    return call.id != -1 ? _buildMainWidget() : _buildErrorWidget();
   }
 
   Widget _buildMainWidget() {
@@ -47,6 +40,7 @@ class _NirikshakCallDetailsScreenState
       child: Scaffold(
         appBar: AppBar(
           bottom: TabBar(
+            labelStyle: const TextStyle(fontSize: 16),
             tabs: _getTabBars(),
           ),
           title: const Text(NirikshakStrings.httpCallDetails),

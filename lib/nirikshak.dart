@@ -15,20 +15,13 @@ export 'ui/widget/nirikshak_call_request_widget.dart';
 export 'ui/widget/nirikshak_call_response_widget.dart';
 
 class Nirikshak {
-  final Brightness brightness;
   final NirikshakCore _nirikshakCore;
 
-  const Nirikshak._(this.brightness, this._nirikshakCore);
+  const Nirikshak._(this._nirikshakCore);
 
-  factory Nirikshak({
-    Brightness brightness = Brightness.light,
-    Color? colorSchemeSeed,
-  }) {
-    final nirikshakCore = NirikshakCore(
-      brightness: brightness,
-      colorSchemeSeed: colorSchemeSeed,
-    );
-    return Nirikshak._(brightness, nirikshakCore);
+  factory Nirikshak() {
+    final nirikshakCore = NirikshakCore();
+    return Nirikshak._(nirikshakCore);
   }
 
   NirikshakDioInterceptor getDioInterceptor() {

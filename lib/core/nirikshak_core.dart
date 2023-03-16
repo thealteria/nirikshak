@@ -9,12 +9,7 @@ import '../ui/page/nirikshak_calls_list_screen.dart';
 export '../utils/nirikshak_strings.dart';
 
 class NirikshakCore {
-  final Brightness brightness;
-  final Color? colorSchemeSeed;
-  NirikshakCore({
-    required this.brightness,
-    this.colorSchemeSeed,
-  });
+  NirikshakCore();
 
   final List<NirikshakHttpCall> httpCalls = <NirikshakHttpCall>[];
 

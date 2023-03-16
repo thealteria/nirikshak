@@ -11,21 +11,14 @@ class NirikshakStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(
-        useMaterial3: true,
-        brightness: nirikshakCore.brightness,
-        colorSchemeSeed: nirikshakCore.colorSchemeSeed,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Nirikshak - HTTP Inspector - Stats"),
       ),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Nirikshak - HTTP Inspector - Stats"),
-        ),
-        body: Container(
-          padding: const EdgeInsets.all(8),
-          child: ListView(
-            children: _buildMainListWidgets(),
-          ),
+      body: Container(
+        padding: const EdgeInsets.all(8),
+        child: ListView(
+          children: _buildMainListWidgets(),
         ),
       ),
     );

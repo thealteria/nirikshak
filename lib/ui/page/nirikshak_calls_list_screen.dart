@@ -40,24 +40,17 @@ class _NirikshakCallsListScreenState extends State<NirikshakCallsListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(
-        useMaterial3: true,
-        brightness: widget._nirikshakCore.brightness,
-        colorSchemeSeed: widget._nirikshakCore.colorSchemeSeed,
+    return Scaffold(
+      appBar: AppBar(
+        title: _searchEnabled ? _buildSearchField() : _buildTitleWidget(),
+        actions: nirikshakCore.httpCalls.isEmpty
+            ? []
+            : [
+                _buildSearchButton(),
+                _buildMenuButton(),
+              ],
       ),
-      child: Scaffold(
-        appBar: AppBar(
-          title: _searchEnabled ? _buildSearchField() : _buildTitleWidget(),
-          actions: nirikshakCore.httpCalls.isEmpty
-              ? []
-              : [
-                  _buildSearchButton(),
-                  _buildMenuButton(),
-                ],
-        ),
-        body: _buildCallsListWrapper(),
-      ),
+      body: _buildCallsListWrapper(),
     );
   }
 
@@ -168,8 +161,6 @@ class _NirikshakCallsListScreenState extends State<NirikshakCallsListScreen> {
       context,
       NirikshakStrings.deleteCalls,
       NirikshakStrings.deleteCallsQues,
-      brightness: widget._nirikshakCore.brightness,
-      colorSchemeSeed: widget._nirikshakCore.colorSchemeSeed,
       firstButtonTitle: NirikshakStrings.no,
       firstButtonAction: () => {},
       secondButtonTitle: NirikshakStrings.yes,

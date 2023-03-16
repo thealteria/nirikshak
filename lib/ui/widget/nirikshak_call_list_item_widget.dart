@@ -52,7 +52,8 @@ class NirikshakCallListItemWidget extends StatelessWidget {
             ),
           ),
         ),
-        _buildResponseColumn(),
+        const SizedBox(width: 10),
+        _buildStatusCodeMessage(),
       ],
     );
   }
@@ -105,7 +106,7 @@ class NirikshakCallListItemWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildResponseColumn() {
+  Widget _buildStatusCodeMessage() {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 5,
@@ -125,19 +126,6 @@ class NirikshakCallListItemWidget extends StatelessWidget {
       ),
     );
   }
-
-  // String _getStatus(NirikshakHttpResponse? response) {
-  //   if (response == null) {
-  //     return 'null';
-  //   }
-  //   if (response.status == -1) {
-  //     return "ERR";
-  //   } else if (response.status == 0) {
-  //     return "???";
-  //   } else {
-  //     return "${response.status}";
-  //   }
-  // }
 
   Widget _getSecuredConnectionIcon(bool secure) {
     IconData iconData;

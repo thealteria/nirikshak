@@ -1,6 +1,6 @@
 name: nirikshak
-description: Nirikshak is a lightweight and minimilistic HTTP Inspector tool for Dio which helps debugging http requests. It's a fork of popular package alice.
-version: 0.0.1
+description: Nirikshak is a lightweight Dio HTTP Inspector tool for Flutter which helps debugging http requests. It's a fork of popular package alice.
+version: 0.1.0
 homepage: https://github.com/thealteria/nirikshak
 
 environment:

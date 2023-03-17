@@ -66,7 +66,7 @@ unlinked.ds
 unlinked_spec.ds
 **/*.gen.dart
 **/*.config.dart
-.fvm/
+.fvm/flutter_sdk
 gen
 
 # Android related

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nirikshak/nirikshak.dart';
+
+import '../../nirikshak.dart';
 
 class NirikshakCallDetailsScreen extends StatefulWidget {
   final NirikshakHttpCall call;

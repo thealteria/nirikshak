@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/nirikshak_core.dart';
-import '../../helper/nirikshak_alert_helper.dart';
-import '../../model/nirikshak_http_call.dart';
-import '../../model/nirikshak_menu_item.dart';
-import '../widget/nirikshak_call_list_item_widget.dart';
-import 'nirikshak_call_details_screen.dart';
-import 'nirikshak_stats_screen.dart';
+import '../../nirikshak.dart';
 
 class NirikshakCallsListScreen extends StatefulWidget {
   final NirikshakCore _nirikshakCore;

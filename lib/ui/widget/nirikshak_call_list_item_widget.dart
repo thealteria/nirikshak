@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../model/nirikshak_http_call.dart';
-import '../../utils/nirikshak_extension.dart';
+import '../../nirikshak.dart';
 
 class NirikshakCallListItemWidget extends StatelessWidget {
   final NirikshakHttpCall call;

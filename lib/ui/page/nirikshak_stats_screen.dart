@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/nirikshak_core.dart';
-import '../../model/nirikshak_http_call.dart';
-import '../../utils/nirikshak_extension.dart';
+import '../../nirikshak.dart';
 
 class NirikshakStatsScreen extends StatelessWidget {
   final NirikshakCore nirikshakCore;

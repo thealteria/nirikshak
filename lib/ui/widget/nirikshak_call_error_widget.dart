@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../model/nirikshak_http_call.dart';
-import 'nirikshak_base_call_details_widget.dart';
+import '../../nirikshak.dart';
 
 class NirikshakCallErrorWidget extends StatefulWidget {
   final NirikshakHttpCall call;

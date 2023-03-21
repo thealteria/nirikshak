@@ -41,7 +41,7 @@ class _NirikshakCallDetailsScreenState
       child: Scaffold(
         appBar: AppBar(
           bottom: TabBar(
-            labelStyle: const TextStyle(fontSize: 16),
+            labelStyle: const TextStyle(fontSize: 15),
             tabs: _getTabBars(),
           ),
           title: const Text(NirikshakStrings.httpCallDetails),

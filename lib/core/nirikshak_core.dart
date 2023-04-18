@@ -4,14 +4,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../nirikshak.dart';
-import '../ui/page/nirikshak_calls_list_screen.dart';
-
-export '../utils/nirikshak_strings.dart';
 
 class NirikshakCore {
   NirikshakCore();
 
   final List<NirikshakHttpCall> httpCalls = <NirikshakHttpCall>[];
+  final ValueNotifier<bool> isHttpCall = ValueNotifier(false);
 
   void addCall(NirikshakHttpCall call) {
     if (httpCalls.isEmpty) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/nirikshak_extension.dart';
+import '../../nirikshak.dart';
 
 abstract class NirikshakBaseCallDetailsWidgetState<T extends StatefulWidget>
     extends State<T> {

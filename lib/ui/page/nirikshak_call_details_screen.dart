@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nirikshak/nirikshak.dart';
+
+import '../../nirikshak.dart';
 
 class NirikshakCallDetailsScreen extends StatefulWidget {
   final NirikshakHttpCall call;
@@ -40,7 +41,6 @@ class _NirikshakCallDetailsScreenState
       child: Scaffold(
         appBar: AppBar(
           bottom: TabBar(
-            labelStyle: const TextStyle(fontSize: 16),
             tabs: _getTabBars(),
           ),
           title: const Text(NirikshakStrings.httpCallDetails),
